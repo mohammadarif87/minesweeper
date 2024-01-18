@@ -27,7 +27,7 @@ for (let i = 1; i <= 100; i++) {
     if (bombsList.includes(i)) {
       cell.classList.add('cell-bomb');
       endGame();
-    } else {
+    } else if (!cell.classList.contains('cell-clicked')) {
       cell.classList.add('cell-clicked');
       updateScore();
     }
